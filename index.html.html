@@ -1,0 +1,534 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Sai Mani Kanta K</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Sai Mani Kanta K — SAP CPI Consultant, Hyderabad. SAP Integration Suite, SuccessFactors, API Management, Event Mesh.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: an integration-flow portfolio. Hero = live iFlow (sender → CPI → receiver); projects drawn as message routes; skills as an adapter palette. */
+:root {
+  --bg: #F2F5F6;
+  --surface: #FFFFFF;
+  --ink: #12222B;
+  --muted: #55666F;
+  --line: #D3DDE1;
+  --accent: #0B7A86;
+  --accent-soft: #DCEFF1;
+  --signal: #D9861C;
+  --font-display: "Familjen Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --step--1: 0.8125rem;
+  --step-0: 1rem;
+  --step-1: 1.25rem;
+  --step-2: 1.625rem;
+  --step-3: 2.25rem;
+  --step-4: clamp(2.5rem, 6vw, 4.25rem);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0E171C; --surface: #15222A; --ink: #E4ECEF; --muted: #93A6AE;
+    --line: #26363F; --accent: #3FC1CC; --accent-soft: #143840; --signal: #F0A646;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0E171C; --surface: #15222A; --ink: #E4ECEF; --muted: #93A6AE;
+  --line: #26363F; --accent: #3FC1CC; --accent-soft: #143840; --signal: #F0A646;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg); color: var(--ink);
+  font-family: var(--font-body); font-size: var(--step-0); line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+a { color: var(--accent); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+.wrap {
+  max-width: 1120px; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+@media (min-width: 720px) { .wrap { padding-left: max(32px, env(safe-area-inset-left, 0px)); padding-right: max(32px, env(safe-area-inset-right, 0px)); } }
+
+/* Nav */
+.nav {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px); border-bottom: 1px solid var(--line);
+}
+.nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 12px; }
+.brand { font-family: var(--font-mono); font-size: var(--step--1); color: var(--ink); text-decoration: none; letter-spacing: .02em; }
+.brand b { color: var(--accent); font-weight: 500; }
+.nav ul { list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; }
+.nav ul a { color: var(--muted); text-decoration: none; font-size: var(--step--1); font-weight: 500; }
+.nav ul a:hover { color: var(--ink); }
+@media (max-width: 640px) { .nav ul { display: none; } }
+
+/* Hero */
+.hero { padding-block: 56px 40px; }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 48px; align-items: center; }
+@media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; gap: 36px; } }
+.status {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--font-mono); font-size: var(--step--1); color: var(--muted);
+  border: 1px solid var(--line); border-radius: 999px; padding: 4px 12px 4px 10px; background: var(--surface);
+}
+.status i { width: 8px; height: 8px; border-radius: 50%; background: #2E9E5B; box-shadow: 0 0 0 3px color-mix(in srgb, #2E9E5B 25%, transparent); }
+h1 {
+  font-family: var(--font-display); font-weight: 700; font-size: var(--step-4);
+  line-height: 1; letter-spacing: -0.025em; margin: 20px 0 12px; text-wrap: balance;
+}
+.role { font-family: var(--font-display); font-size: var(--step-2); font-weight: 500; color: var(--accent); margin: 0 0 20px; letter-spacing: -0.01em; }
+.lede { color: var(--muted); max-width: 58ch; margin: 0 0 28px; font-size: 1.0625rem; }
+.cta { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px; padding: 11px 18px; border-radius: 8px;
+  font-weight: 600; font-size: .9375rem; text-decoration: none; border: 1px solid var(--line);
+  color: var(--ink); background: var(--surface); cursor: pointer; font-family: inherit;
+}
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+.btn:hover { border-color: var(--accent); }
+.btn svg { width: 16px; height: 16px; }
+
+.facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; margin-top: 40px; border-top: 1px solid var(--line); }
+.facts div { padding: 16px 16px 0 0; }
+.facts div + div { padding-left: 16px; border-left: 1px solid var(--line); }
+.facts strong { display: block; font-family: var(--font-display); font-size: var(--step-3); line-height: 1.1; font-variant-numeric: tabular-nums; }
+.facts span { font-size: var(--step--1); color: var(--muted); }
+
+/* iFlow diagram */
+.iflow {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 18px;
+  background-image: radial-gradient(var(--line) 1px, transparent 1px); background-size: 18px 18px;
+}
+.iflow-head { display: flex; justify-content: space-between; gap: 12px; font-family: var(--font-mono); font-size: 0.75rem; color: var(--muted); margin-bottom: 8px; }
+.iflow-head b { color: var(--ink); font-weight: 500; }
+.iflow svg { width: 100%; height: auto; display: block; }
+.iflow text { font-family: var(--font-mono); }
+.node { fill: var(--surface); stroke: var(--line); stroke-width: 1.5; }
+.node.core { stroke: var(--accent); stroke-width: 2; fill: var(--accent-soft); }
+.lbl { fill: var(--ink); font-size: 11px; }
+.sub { fill: var(--muted); font-size: 9px; }
+.pipe { fill: none; stroke: var(--line); stroke-width: 2; }
+.pipe.live { stroke: var(--accent); stroke-dasharray: 4 7; animation: flow 1.4s linear infinite; }
+.step { fill: var(--surface); stroke: var(--accent); stroke-width: 1.2; }
+.steptxt { fill: var(--accent); font-size: 8.5px; }
+.pkt { fill: var(--signal); }
+@keyframes flow { to { stroke-dashoffset: -22; } }
+.iflow-foot { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 10px; font-family: var(--font-mono); font-size: 0.75rem; color: var(--muted); }
+.iflow-foot span::before { content: "●"; color: #2E9E5B; margin-right: 6px; }
+
+/* Sections */
+section.block { padding-block: 64px; border-top: 1px solid var(--line); }
+.sec-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 32px; }
+.eyebrow { font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: .12em; color: var(--accent); margin: 0 0 8px; }
+h2 { font-family: var(--font-display); font-size: var(--step-3); line-height: 1.1; letter-spacing: -0.02em; margin: 0; text-wrap: balance; }
+.sec-note { color: var(--muted); max-width: 46ch; margin: 0; font-size: .9375rem; }
+
+/* About */
+.about-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+@media (max-width: 760px) { .about-grid { grid-template-columns: 1fr; } }
+.cap { display: grid; grid-template-columns: 36px minmax(0, 1fr); gap: 14px; padding: 18px 0; border-bottom: 1px solid var(--line); }
+.cap svg { width: 22px; height: 22px; color: var(--accent); margin-top: 3px; }
+.cap h3 { font-size: 1rem; margin: 0 0 4px; font-weight: 600; }
+.cap p { margin: 0; color: var(--muted); font-size: .9375rem; }
+
+/* Experience */
+.timeline { display: grid; gap: 40px; }
+.role-block { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 32px; }
+@media (max-width: 820px) { .role-block { grid-template-columns: 1fr; gap: 16px; } }
+.role-meta .dates { font-family: var(--font-mono); font-size: var(--step--1); color: var(--muted); font-variant-numeric: tabular-nums; }
+.role-meta h3 { font-family: var(--font-display); font-size: var(--step-1); margin: 6px 0 2px; line-height: 1.25; }
+.role-meta .title { color: var(--accent); font-weight: 600; font-size: .9375rem; }
+.role-meta .now { display: inline-block; margin-top: 10px; font-family: var(--font-mono); font-size: 0.6875rem; letter-spacing: .08em; text-transform: uppercase; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); }
+.projects { display: grid; gap: 20px; }
+
+.project { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 22px; min-width: 0; }
+.project h4 { font-family: var(--font-display); font-size: var(--step-1); margin: 0 0 4px; line-height: 1.25; letter-spacing: -0.01em; }
+.project .client { font-size: var(--step--1); color: var(--muted); margin: 0 0 16px; }
+.route { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-bottom: 18px; font-family: var(--font-mono); font-size: 0.78rem; }
+.route .ep { padding: 5px 10px; border: 1px solid var(--line); border-radius: 6px; background: var(--bg); }
+.route .ep.cpi { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); font-weight: 500; }
+.route .arr { color: var(--signal); }
+.project ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+.project li { position: relative; padding-left: 20px; font-size: .9375rem; color: var(--ink); }
+.project li::before { content: ""; position: absolute; left: 2px; top: .62em; width: 8px; height: 2px; background: var(--accent); }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 18px; padding-top: 16px; border-top: 1px dashed var(--line); }
+.tag { font-family: var(--font-mono); font-size: 0.72rem; padding: 3px 8px; border-radius: 4px; background: var(--bg); color: var(--muted); border: 1px solid var(--line); }
+details.more summary { cursor: pointer; color: var(--accent); font-size: .875rem; font-weight: 600; margin-top: 12px; list-style: none; }
+details.more summary::-webkit-details-marker { display: none; }
+details.more summary::after { content: " +"; }
+details.more[open] summary::after { content: " −"; }
+details.more ul { margin-top: 10px; }
+
+/* Skills */
+.palette { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+@media (max-width: 960px) { .palette { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .palette { grid-template-columns: 1fr; } }
+.group { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 20px; min-width: 0; }
+.group h3 { display: flex; align-items: center; gap: 10px; font-size: .9375rem; margin: 0 0 14px; font-weight: 600; }
+.group h3 span { font-family: var(--font-mono); font-size: .7rem; color: var(--muted); font-weight: 400; margin-left: auto; font-variant-numeric: tabular-nums; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: .8125rem; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--line); background: var(--bg); }
+.chip.key { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); font-weight: 500; }
+.legend { font-size: var(--step--1); color: var(--muted); display: flex; align-items: center; gap: 8px; margin: 0; }
+.legend .chip { font-size: .72rem; padding: 2px 8px; }
+
+/* Strengths strip */
+.strengths { display: flex; flex-wrap: wrap; gap: 10px 26px; margin-top: 32px; padding: 20px 0 0; border-top: 1px solid var(--line); font-family: var(--font-display); font-size: 1.0625rem; font-weight: 500; }
+.strengths span::before { content: "→ "; color: var(--signal); }
+
+/* Education */
+.edu { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+@media (max-width: 760px) { .edu { grid-template-columns: 1fr; } }
+.edu-item { padding: 20px 0; border-top: 2px solid var(--ink); }
+.edu-item .yr { font-family: var(--font-mono); font-size: var(--step--1); color: var(--muted); font-variant-numeric: tabular-nums; }
+.edu-item h3 { font-family: var(--font-display); font-size: var(--step-1); margin: 4px 0 2px; }
+.edu-item p { margin: 0; color: var(--muted); font-size: .9375rem; }
+.edu-item .score { margin-top: 12px; font-family: var(--font-display); font-size: var(--step-2); font-weight: 600; color: var(--ink); font-variant-numeric: tabular-nums; }
+.edu-item .score small { font-size: .875rem; color: var(--muted); font-weight: 400; }
+
+/* Contact */
+.contact { background: var(--ink); color: var(--bg); border-radius: 16px; padding: clamp(24px, 5vw, 48px); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px; align-items: center; }
+@media (max-width: 820px) { .contact { grid-template-columns: 1fr; } }
+.contact h2 { color: var(--bg); }
+.contact .eyebrow { color: var(--signal); }
+.contact p { color: color-mix(in srgb, var(--bg) 72%, var(--ink)); margin: 12px 0 0; max-width: 44ch; }
+.channels { display: grid; gap: 10px; }
+.channel { display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-radius: 10px; border: 1px solid color-mix(in srgb, var(--bg) 22%, var(--ink)); min-width: 0; }
+.channel .k { font-family: var(--font-mono); font-size: .7rem; text-transform: uppercase; letter-spacing: .1em; color: color-mix(in srgb, var(--bg) 60%, var(--ink)); width: 72px; flex: none; }
+.channel .v { flex: 1; min-width: 0; overflow-wrap: anywhere; user-select: all; font-size: .9375rem; color: var(--bg); text-decoration: none; }
+.channel button, .channel a.go { flex: none; font: 500 .75rem var(--font-mono); padding: 6px 10px; border-radius: 6px; border: 1px solid color-mix(in srgb, var(--bg) 30%, var(--ink)); background: transparent; color: var(--bg); cursor: pointer; text-decoration: none; }
+.channel button:hover, .channel a.go:hover { border-color: var(--signal); color: var(--signal); }
+
+footer { padding-block: 32px 48px; color: var(--muted); font-size: var(--step--1); font-family: var(--font-mono); }
+footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .pipe.live { animation: none; }
+  .pkt { display: none; }
+  html { scroll-behavior: auto; }
+}
+</style>
+
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="#top">sai.mani.kanta <b>/ cpi</b></a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="status"><i></i>Open to SAP integration roles · Hyderabad</span>
+      <h1>Sai Mani Kanta K</h1>
+      <p class="role">SAP CPI Consultant</p>
+      <p class="lede">I build and run integrations on SAP Integration Suite. My work connects SuccessFactors, S/4HANA and third-party systems through Cloud Integration, API Management and Event Mesh, from requirements and design through to production support.</p>
+      <div class="cta">
+        <a class="btn primary" href="#experience">See my projects</a>
+        <a class="btn" href="https://www.linkedin.com/in/sai-mani-kanta-k-336290213/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3zM9.5 9.75h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5c0-1.2-.02-2.75-1.68-2.75-1.68 0-1.94 1.31-1.94 2.66V21h-4z"/></svg>
+          LinkedIn
+        </a>
+      </div>
+      <div class="facts">
+        <div><strong>2 yrs</strong><span>SAP Integration Suite</span></div>
+        <div><strong>3</strong><span>Production integrations delivered</span></div>
+        <div><strong>15+</strong><span>Adapters in daily use</span></div>
+      </div>
+    </div>
+
+    <figure class="iflow" aria-label="Diagram of an integration flow: biometric attendance data moves through SAP CPI to SuccessFactors Employee Central and Payroll">
+      <div class="iflow-head"><span>iFlow · <b>Biometric_LOP_Adjustment</b></span><span>v1.4 · deployed</span></div>
+      <svg viewBox="0 0 480 270" role="img" aria-hidden="true">
+        <!-- sender -->
+        <rect class="node" x="8" y="104" width="96" height="58" rx="8"/>
+        <text class="lbl" x="56" y="129" text-anchor="middle">Biometric</text>
+        <text class="sub" x="56" y="145" text-anchor="middle">BioStar 2 · ZKTeco</text>
+
+        <!-- CPI process -->
+        <rect class="node core" x="138" y="58" width="208" height="150" rx="10"/>
+        <text class="lbl" x="150" y="78" style="fill:var(--accent);font-weight:500">SAP Cloud Integration</text>
+        <rect class="step" x="152" y="92" width="86" height="24" rx="4"/><text class="steptxt" x="195" y="108" text-anchor="middle">PGP Decrypt</text>
+        <rect class="step" x="246" y="92" width="86" height="24" rx="4"/><text class="steptxt" x="289" y="108" text-anchor="middle">Groovy · Hours</text>
+        <rect class="step" x="152" y="124" width="86" height="24" rx="4"/><text class="steptxt" x="195" y="140" text-anchor="middle">Router · LOP</text>
+        <rect class="step" x="246" y="124" width="86" height="24" rx="4"/><text class="steptxt" x="289" y="140" text-anchor="middle">Msg Mapping</text>
+        <rect class="step" x="152" y="156" width="180" height="24" rx="4" style="stroke-dasharray:3 3"/><text class="steptxt" x="242" y="172" text-anchor="middle">Exception · JMS retry · Alert</text>
+        <text class="sub" x="150" y="198">Cloud Connector → on-prem</text>
+
+        <!-- receivers -->
+        <rect class="node" x="376" y="62" width="96" height="54" rx="8"/>
+        <text class="lbl" x="424" y="86" text-anchor="middle">SF EC</text>
+        <text class="sub" x="424" y="101" text-anchor="middle">Leave · Time</text>
+        <rect class="node" x="376" y="150" width="96" height="54" rx="8"/>
+        <text class="lbl" x="424" y="174" text-anchor="middle">SF ECP</text>
+        <text class="sub" x="424" y="189" text-anchor="middle">Payroll</text>
+
+        <!-- pipes -->
+        <path id="p1" class="pipe" d="M104 133 H138"/>
+        <path class="pipe live" d="M104 133 H138"/>
+        <path id="p2" class="pipe" d="M346 110 C362 110 360 89 376 89"/>
+        <path class="pipe live" d="M346 110 C362 110 360 89 376 89"/>
+        <path id="p3" class="pipe" d="M346 156 C362 156 360 177 376 177"/>
+        <path class="pipe live" d="M346 156 C362 156 360 177 376 177"/>
+
+        <!-- adapter labels -->
+        <text class="sub" x="121" y="124" text-anchor="middle">SFTP</text>
+        <text class="sub" x="361" y="78" text-anchor="middle">OData</text>
+        <text class="sub" x="361" y="214" text-anchor="middle">SFAPI</text>
+
+        <!-- packets -->
+        <circle class="pkt" r="4"><animateMotion dur="1.6s" repeatCount="indefinite"><mpath href="#p1"/></animateMotion></circle>
+        <circle class="pkt" r="4"><animateMotion dur="1.6s" begin="0.8s" repeatCount="indefinite"><mpath href="#p2"/></animateMotion></circle>
+        <circle class="pkt" r="4"><animateMotion dur="1.6s" begin="1.1s" repeatCount="indefinite"><mpath href="#p3"/></animateMotion></circle>
+
+        <!-- timer -->
+        <circle cx="56" cy="222" r="11" class="node"/>
+        <path d="M56 215 V222 L61 225" stroke="var(--muted)" stroke-width="1.5" fill="none"/>
+        <text class="sub" x="74" y="225">Timer start · daily run</text>
+      </svg>
+      <figcaption class="iflow-foot"><span>MPL: Completed</span><span>Alerts: email</span><span>DEV → QA → PRD</span></figcaption>
+    </figure>
+  </div>
+</header>
+
+<section class="block" id="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow">About</p><h2>What I bring to an integration team</h2></div>
+      <p class="sec-note">Hands-on across the full lifecycle: design, build, test, deploy, monitor and support SAP and non-SAP integrations.</p>
+    </div>
+    <div class="about-grid">
+      <div class="cap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h6M4 17h6M14 7h6M14 17h6M10 7c2 0 2 10 4 10M10 17c2 0 2-10 4-10"/></svg>
+        <div><h3>End-to-end iFlow development</h3><p>REST, SOAP, OData, IDoc, SFTP, HTTPS and SuccessFactors adapters, built into flows that are tested and moved cleanly through DEV, QA and Production.</p></div>
+      </div>
+      <div class="cap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M8 6l-5 6 5 6M16 6l5 6-5 6M14 4l-4 16"/></svg>
+        <div><h3>Groovy and message mapping</h3><p>Graphical mapping, Content Modifier, Router and Groovy for transformation, validation, data enrichment and business rules such as working-hour calculations.</p></div>
+      </div>
+      <div class="cap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+        <div><h3>Secure connectivity</h3><p>OAuth 2.0, client certificates, Basic Auth, PGP encryption and decryption, key handling and SAP Cloud Connector for on-premise access.</p></div>
+      </div>
+      <div class="cap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 12h4l3-7 4 14 3-7h4"/></svg>
+        <div><h3>Production support</h3><p>Monitoring, alerts, message reprocessing, JMS-based retry, reusable ProcessDirect flows, root-cause analysis and performance tuning.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="experience">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow">Experience</p><h2>Projects and the routes they run on</h2></div>
+      <p class="sec-note">Each project shows its message route: where data starts, how CPI handles it, and where it lands.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="role-block">
+        <div class="role-meta">
+          <div class="dates">Feb 2025 – Present</div>
+          <h3>UJR Technologies Pvt. Ltd.</h3>
+          <div class="title">SAP CPI Consultant</div>
+          <span class="now">Current role</span>
+        </div>
+        <div class="projects">
+          <article class="project">
+            <h4>Biometric Leave and LOP Adjustment</h4>
+            <p class="client">Sharaf Group · HR / Payroll</p>
+            <div class="route" aria-label="Route">
+              <span class="ep">Biometric Attendance</span><span class="arr">→</span>
+              <span class="ep cpi">SAP CPI</span><span class="arr">→</span>
+              <span class="ep">SuccessFactors EC / ECP</span>
+            </div>
+            <ul>
+              <li>Took raw biometric punches and flagged late arrivals, early exits, absences and short-hour days.</li>
+              <li>Calculated actual working hours from first-in and last-out times against expected hours, then raised exception requests.</li>
+              <li>Designed approval logic that converts each exception into paid leave, Comp-Off or loss of pay based on eligibility and balance.</li>
+              <li>Posted processed attendance and timesheet data to SuccessFactors EC and ECP for downstream payroll.</li>
+            </ul>
+            <details class="more">
+              <summary>Build and support details</summary>
+              <ul>
+                <li>Developed iFlows with SFTP, HTTPS and FTP adapters; configured Cloud Connector for on-premise applications.</li>
+                <li>Applied PGP encryption and decryption to secure payloads in transit.</li>
+                <li>Set up monitoring, alerts and reprocessing for failed messages; supported production issue resolution.</li>
+                <li>Wrote test cases and ran unit, acceptance and end-to-end testing. Took part in requirements gathering and solution design.</li>
+              </ul>
+            </details>
+            <div class="tags"><span class="tag">SFTP</span><span class="tag">HTTPS</span><span class="tag">FTP</span><span class="tag">Cloud Connector</span><span class="tag">PGP</span><span class="tag">Groovy</span><span class="tag">SF EC</span><span class="tag">ECP</span></div>
+          </article>
+
+          <article class="project">
+            <h4>SuccessFactors to Active Directory Sync</h4>
+            <p class="client">Employee identity synchronisation · Hourly schedule</p>
+            <div class="route" aria-label="Route">
+              <span class="ep">SuccessFactors EC</span><span class="arr">→</span>
+              <span class="ep cpi">SAP CPI</span><span class="arr">→</span>
+              <span class="ep">Active Directory</span>
+            </div>
+            <ul>
+              <li>Built scheduled iFlows that pull employee master data every hour and push changes to Active Directory.</li>
+              <li>Queried PerPerson, EmpJob, EmpEmployment and PerEmail entities over OData.</li>
+              <li>Implemented delta loads on lastModifiedDateTime with OData filters, so only new and changed employees are processed.</li>
+              <li>Used Router and Groovy to separate new, updated and unchanged records before mapping to the AD schema.</li>
+            </ul>
+            <details class="more">
+              <summary>Build and support details</summary>
+              <ul>
+                <li>Configured secure connectivity and authentication across SuccessFactors, CPI and Active Directory.</li>
+                <li>Added exception handling, email alerts and MPL monitoring; ran end-to-end testing and production support.</li>
+              </ul>
+            </details>
+            <div class="tags"><span class="tag">OData v2</span><span class="tag">SuccessFactors adapter</span><span class="tag">Delta sync</span><span class="tag">Router</span><span class="tag">Groovy</span><span class="tag">Timer</span></div>
+          </article>
+        </div>
+      </div>
+
+      <div class="role-block">
+        <div class="role-meta">
+          <div class="dates">Oct 2024 – Feb 2025</div>
+          <h3>Ktriox Consulting Pvt. Ltd.</h3>
+          <div class="title">Associate CPI Consultant</div>
+        </div>
+        <div class="projects">
+          <article class="project">
+            <h4>Vendor Management: Contingent Employee Integration</h4>
+            <p class="client">Workforce and vendor data exchange</p>
+            <div class="route" aria-label="Route">
+              <span class="ep">Internal Employee App</span><span class="arr">→</span>
+              <span class="ep cpi">SAP CPI</span><span class="arr">→</span>
+              <span class="ep">UKG · Beeline · NICE</span>
+            </div>
+            <ul>
+              <li>Built import and export interfaces for employee, assignment, vendor and workforce data across three vendor platforms.</li>
+              <li>Used the JMS adapter for reliable delivery and automatic retry of failed target-system posts.</li>
+              <li>Created reusable common flows called through ProcessDirect, so shared logic is written once and used by many interfaces.</li>
+              <li>Combined graphical mapping, Content Modifier and Groovy for transformation and business logic, with PGP for secure payloads.</li>
+            </ul>
+            <details class="more">
+              <summary>Build and support details</summary>
+              <ul>
+                <li>Implemented exception handling, monitoring, email alerts and message reprocessing.</li>
+                <li>Ran end-to-end testing and supported deployments across DEV, QA and Production.</li>
+              </ul>
+            </details>
+            <div class="tags"><span class="tag">JMS</span><span class="tag">ProcessDirect</span><span class="tag">PGP</span><span class="tag">Message Mapping</span><span class="tag">Groovy</span><span class="tag">Alerts</span></div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="skills">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow">Skills</p><h2>My integration palette</h2></div>
+      <p class="legend"><span class="chip key">Highlighted</span> used in delivered projects</p>
+    </div>
+    <div class="palette">
+      <div class="group">
+        <h3>SAP Integration Suite <span>07</span></h3>
+        <div class="chips"><span class="chip key">Cloud Integration (CPI)</span><span class="chip">API Management</span><span class="chip">BTP Integration Suite</span><span class="chip key">Cloud Connector</span><span class="chip">Destination Service</span><span class="chip">Event Mesh</span><span class="chip">Advanced Event Mesh</span></div>
+      </div>
+      <div class="group">
+        <h3>Adapters and connectivity <span>15</span></h3>
+        <div class="chips"><span class="chip key">HTTPS</span><span class="chip">REST</span><span class="chip">SOAP</span><span class="chip key">OData v2/v4</span><span class="chip key">SFTP</span><span class="chip key">FTP</span><span class="chip">IDoc</span><span class="chip key">SuccessFactors</span><span class="chip">JDBC</span><span class="chip key">Mail</span><span class="chip key">JMS</span><span class="chip">AMQP</span><span class="chip">AS2</span><span class="chip key">ProcessDirect</span><span class="chip">AEM</span></div>
+      </div>
+      <div class="group">
+        <h3>Development <span>08</span></h3>
+        <div class="chips"><span class="chip key">Groovy</span><span class="chip key">Graphical Mapping</span><span class="chip">XSLT Mapping</span><span class="chip key">Content Modifier</span><span class="chip key">Router</span><span class="chip key">Exception Handling</span><span class="chip">Validation</span><span class="chip">Data Enrichment</span></div>
+      </div>
+      <div class="group">
+        <h3>SAP systems <span>08</span></h3>
+        <div class="chips"><span class="chip key">SuccessFactors EC</span><span class="chip key">EC Payroll</span><span class="chip">SFAPI</span><span class="chip">S/4HANA</span><span class="chip">ECC</span><span class="chip">SAP HR/Payroll</span><span class="chip">Ariba</span><span class="chip">MDM</span></div>
+      </div>
+      <div class="group">
+        <h3>Third-party systems <span>07</span></h3>
+        <div class="chips"><span class="chip key">BioStar 2</span><span class="chip">Suprema</span><span class="chip">ZKTeco</span><span class="chip">Shipnet Payroll</span><span class="chip key">Active Directory</span><span class="chip key">UKG · Beeline · NICE</span><span class="chip">Document Management</span></div>
+      </div>
+      <div class="group">
+        <h3>Security and encoding <span>08</span></h3>
+        <div class="chips"><span class="chip">OAuth 2.0</span><span class="chip">Basic Auth</span><span class="chip">Client Certificates</span><span class="chip key">PGP Encrypt/Decrypt</span><span class="chip">Key Pair Handling</span><span class="chip">Base64 / MIME</span><span class="chip">XML ↔ JSON</span><span class="chip">Payload Conversion</span></div>
+      </div>
+    </div>
+    <div class="strengths" aria-label="Core strengths">
+      <span>Production support and troubleshooting</span>
+      <span>Monitoring, alerts and reprocessing</span>
+      <span>Secure API integrations</span>
+      <span>SuccessFactors integrations</span>
+      <span>Cross-system integration</span>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="education">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow">Education</p><h2>Academic background</h2></div>
+    </div>
+    <div class="edu">
+      <div class="edu-item"><div class="yr">2024</div><h3>B.Tech</h3><p>R.V.R &amp; J.C College of Engineering</p><div class="score">8.05 <small>/ 10 CGPA</small></div></div>
+      <div class="edu-item"><div class="yr">2019</div><h3>Intermediate</h3><p>Narayana Junior College</p><div class="score">9.3 <small>/ 10 CGPA</small></div></div>
+      <div class="edu-item"><div class="yr">2017</div><h3>SSC</h3><p>Narayana E/M School</p><div class="score">9.8 <small>/ 10 CGPA</small></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="contact">
+  <div class="wrap">
+    <div class="contact">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h2>Need an integration built or kept running?</h2>
+        <p>I'm based in Hyderabad and open to SAP CPI and Integration Suite roles. Email is the fastest way to reach me.</p>
+      </div>
+      <div class="channels">
+        <div class="channel"><span class="k">Email</span><span class="v" id="email">manikondaveeti986@gmail.com</span><button type="button" data-copy="email">Copy</button></div>
+        <div class="channel"><span class="k">Phone</span><span class="v" id="phone">+91 94912 07275</span><button type="button" data-copy="phone">Copy</button></div>
+        <div class="channel"><span class="k">LinkedIn</span><span class="v">sai-mani-kanta-k</span><a class="go" href="https://www.linkedin.com/in/sai-mani-kanta-k-336290213/" target="_blank" rel="noopener">Open</a></div>
+        <div class="channel"><span class="k">Location</span><span class="v">Hyderabad, India</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap"><span>© 2026 Sai Mani Kanta K</span><span>SAP CPI Consultant · Hyderabad</span></div>
+</footer>
+
+<script>
+document.querySelectorAll('[data-copy]').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var el = document.getElementById(btn.dataset.copy);
+    var text = el.textContent.trim();
+    var done = function () { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = 'Copy'; }, 1600); };
+    var fallback = function () {
+      var r = document.createRange(); r.selectNodeContents(el);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      btn.textContent = 'Selected';
+      setTimeout(function () { btn.textContent = 'Copy'; }, 1600);
+    };
+    try { navigator.clipboard.writeText(text).then(done, fallback); } catch (e) { fallback(); }
+  });
+});
+</script>
+
+</body></html>
